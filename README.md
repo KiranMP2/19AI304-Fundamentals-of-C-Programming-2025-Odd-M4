@@ -42,47 +42,61 @@
   Stop
 # Program:
 ```
-#include<stdio.h>
+#include <stdio.h>
 
-void validateDate(){
+void validateDate() {
     int dd, mm, yy;
+    printf("KIRAN MP\n");
+    printf("REG NO:212224230123\n");
+    printf("Enter date (DD/MM/YYYY): ");
     scanf("%d/%d/%d", &dd, &mm, &yy);
 
-    if(yy < 1900 || yy > 9999){
+    if (yy < 1900 || yy > 9999) {
         printf("Year is not valid\n");
         return;
     }
 
-    if(mm < 1 || mm > 12){
+    if (mm < 1 || mm > 12) {
         printf("Month is not valid\n");
         return;
     }
 
-    int isValid = 0;
-
-    if(mm == 1 || mm == 3 || mm == 5 || mm == 7 || mm == 8 || mm == 10 || mm == 12){
-        if(dd >= 1 && dd <= 31) isValid = 1;
-    } else if(mm == 4 || mm == 6 || mm == 9 || mm == 11){
-        if(dd >= 1 && dd <= 30) isValid = 1;
-    } else if(mm == 2){
-        if(dd >= 1 && dd <= 28) isValid = 1;
-        else if(dd == 29 && ((yy % 4 == 0 && yy % 100 != 0) || (yy % 400 == 0))) isValid = 1;
+    if (mm == 2) { 
+        if ((yy % 4 == 0 && yy % 100 != 0) || (yy % 400 == 0)) { 
+            if (dd < 1 || dd > 29) {
+                printf("Date is invalid\n");
+                return;
+            }
+        } else {
+            if (dd < 1 || dd > 28) {
+                printf("Date is invalid\n");
+                return;
+            }
+        }
+    } else if (mm == 4 || mm == 6 || mm == 9 || mm == 11) { 
+        
+        if (dd < 1 || dd > 30) {
+            printf("Date is invalid\n");
+            return;
+        }
+    } else { 
+        if (dd < 1 || dd > 31) {
+            printf("Date is invalid\n");
+            return;
+        }
     }
 
-    if(isValid)
-        printf("Date is valid.\n");
-    else
-        printf("Date is invalid.\n");
+    printf("Date is valid\n");
 }
 
-int main(){
+int main() {
     validateDate();
     return 0;
 }
-
 ```
 # Output:
-<img width="428" height="172" alt="image" src="https://github.com/user-attachments/assets/f9e5d1c6-6339-41f8-9e47-7499f08e8c12" />
+<img width="432" height="324" alt="image" src="https://github.com/user-attachments/assets/7a9f6653-2b0b-4642-8e8a-837086a7ddc3" />
+
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
@@ -133,7 +147,6 @@ Thus, the program was implemented and executed successfully, and the required ou
 # Program:
 ```
 #include<stdio.h>
-
 int max(int a, int b){
     if(a > b)
         return a;
@@ -149,6 +162,8 @@ int min(int a, int b){
 }
 
 int main(){
+    printf("KIRAN MP\n");
+    printf("REG NO:212224230123\n");
     int num1, num2, maximum, minimum;
 
     scanf("%d %d", &num1, &num2);
@@ -164,7 +179,8 @@ int main(){
 
 ```
 # Output:
-<img width="402" height="207" alt="image" src="https://github.com/user-attachments/assets/ac72ad19-5313-4569-ab00-afe24ce025a6" />
+<img width="505" height="442" alt="image" src="https://github.com/user-attachments/assets/73fc3508-0e0d-470b-bb5f-ea0f077caa4e" />
+
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
@@ -233,6 +249,8 @@ float ftocel(){
 }
 
 int main(){
+    printf("KIRAN MP\n");
+printf("REG NO:212224230123\n");
     float F, C;
 
     F = celtof();
@@ -246,7 +264,8 @@ int main(){
 
 ```
 # Output:
-<img width="456" height="209" alt="image" src="https://github.com/user-attachments/assets/3b81d7ae-7cdc-4ac5-ba62-2d670a8953ac" />
+<img width="531" height="442" alt="image" src="https://github.com/user-attachments/assets/980283e2-b1ed-449a-bc9e-9fd9ae50837a" />
+
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
@@ -328,6 +347,8 @@ void spiralPrint(int m, int n, int a[R][C]){
 }
 
 int main(){
+    printf("KIRAN MP\n");
+printf("REG NO:212224230123\n");
     int a[R][C] = {
         {1, 2, 3, 4},
         {5, 6, 7, 8},
@@ -342,7 +363,8 @@ int main(){
 
 ```
 # Output:
-<img width="460" height="136" alt="image" src="https://github.com/user-attachments/assets/c619f5e9-80e4-400a-b530-7569f571ea21" />
+<img width="476" height="373" alt="image" src="https://github.com/user-attachments/assets/724d2fcf-cefb-4aad-be46-dfa585544326" />
+
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
@@ -398,6 +420,8 @@ void convertFirstCLastC(char str[]){
 }
 
 int main(){
+    printf("KIRAN MP\n");
+printf("REG NO:212224230123\n");
     char str[100];
     scanf("%[^\n]s", str);
 
@@ -409,7 +433,8 @@ int main(){
 
 ```
 # Output:
-<img width="401" height="173" alt="image" src="https://github.com/user-attachments/assets/e13f91bb-2a84-4fbf-951b-8798ff9dc38c" />
+<img width="439" height="363" alt="image" src="https://github.com/user-attachments/assets/b72e45ed-244d-46a7-ab86-d9b2fcdc13a6" />
+
 
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
